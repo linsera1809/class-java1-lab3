@@ -47,4 +47,14 @@ public class Surname {
     public void setProportion(double proportion) {
         this.proportion = proportion;
     }
+
+    @Override
+    public String toString() {
+        return "Surname{" +
+                "name='" + name + '\'' +
+                ", rank=" + rank +
+                ", count=" + count +
+                ", proportion=" + proportion +
+                '}';
+    }
 }
