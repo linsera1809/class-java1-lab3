@@ -1,3 +1,5 @@
-# class-java1-lab3
+# class-lab3-javaIO
 
-## For CSCC SoftwareDevCert Purposes
+## For CSCC Purposes Only
+
+*Software Development Certificate - Cohort 2019*
