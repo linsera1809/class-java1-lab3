@@ -15,16 +15,24 @@ public class Census {
             while (nameInput.hasNextLine() && line <100){
                 String curLine = nameInput.nextLine();
                 String output[] = curLine.split(",");
-                Surname curSurname = new Surname(output[0], Integer.parseInt(output[1]), Integer.parseInt(output[2]), Double.parseDouble(output[3]));
+                Surname curSurname = new Surname(
+                        output[0],
+                        Integer.parseInt(output[1]),
+                        Integer.parseInt(output[2]),
+                        Double.parseDouble(output[3])
+                );
                 namelist[line] = curSurname;
                 line++;
             }
-        } catch(FileNotFoundException fnfe) {
-            //print line function here
-            System.out.println("File not found " + fnfe);
+
+        } catch(FileNotFoundException fileNotFoundException) {
+
+            System.out.println("File not found " + fileNotFoundException);
             return null;
-        } catch(NumberFormatException nfe) {
-            System.out.println("Number format exception " + nfe);
+        } catch(NumberFormatException numberFormatException) {
+            System.out.println("Number format exception " + numberFormatException);
+        } catch (Exception e) {
+            System.out.println("Uh oh.. something went wrong " + e);
         }
 
         return namelist;
